@@ -1,5 +1,6 @@
 # Tip Splitter Calculator
 This app calculates the amount of tip a customer(s) will give after having lunch/dinner at a store.
+Check out and test the full app <a href="https://tipsplitter.netlify.app/">Here </a> 😊
 
 ## Sample Output:
 
@@ -17,6 +18,10 @@ This app calculates the amount of tip a customer(s) will give after having lunch
 <img width="408" height="auto" alt="page 4" src="https://user-images.githubusercontent.com/31680529/129578620-b24a5b83-97c4-48fa-af4b-793291c2417d.png">
 <img width="408" height="auto"  alt="page five" src="https://user-images.githubusercontent.com/31680529/129579977-40a55220-bc81-47b6-b55c-963e37eed286.png">
 </div>
+
+## Reach out to more of my projects on:
+## <a href="https://www.youtube.com/channel/UC3cQi5gvNeiPiPXTrMhZJMg"> Youtube </a>
+## <a href="https://twitter.com/mKasuleCoder">Twitter</a>
 
 
 
