@@ -11,6 +11,7 @@ numbOfCustomers.addEventListener("keypress", getCustomerNumber);
 let tipToken = document.getElementById("tipToken"); // tips
 let totalPerPerson = document.getElementById("tipTotal"); // total fees
 let customerNumber = document.getElementById("emp_number"); //access the number of customers
+const errorMessage = document.getElementById("error_numOfPeopleID"); //error message
 
 //BUTTONS
 //FIVE BUTTON
@@ -21,12 +22,15 @@ five.addEventListener("click", () => {
   tipToken.innerText = Math.round(tipValue * 100) / 100;
 
   //check customer input
-  if (customerNumber.value !== "") {
+  if (customerNumber.value !== "" && customerNumber.value >= 1) {
+    errorMessage.style.display = "none"; //remove div customer input is >= 0
     let tipTotalPerPerson =
       (parseFloat(document.getElementById("billAmount").value) + tipValue) /
       customerNumber.value;
     totalPerPerson.innerText = Math.round(tipTotalPerPerson * 100) / 100;
   } else {
+    errorMessage.innerText = "Can't be less than 0";
+    customerNumber.value = 1; //reset input to 1
     tipTotalPerPerson =
       parseFloat(document.getElementById("billAmount").value) + tipValue;
     totalPerPerson.innerText = Math.round(tipTotalPerPerson * 100) / 100;
@@ -39,12 +43,15 @@ ten.addEventListener("click", () => {
   tipToken.innerText = Math.round(tipValue * 100) / 100;
 
   //check customer input
-  if (customerNumber.value !== "") {
+  if (customerNumber.value !== "" && customerNumber.value >= 1) {
+    errorMessage.style.display = "none"; //remove div customer input is >= 0
     let tipTotalPerPerson =
       (parseFloat(document.getElementById("billAmount").value) + tipValue) /
       customerNumber.value;
     totalPerPerson.innerText = Math.round(tipTotalPerPerson * 100) / 100;
   } else {
+    errorMessage.innerText = "Can't be less than 0";
+    customerNumber.value = 1; //reset input to 1
     tipTotalPerPerson =
       parseFloat(document.getElementById("billAmount").value) + tipValue;
     totalPerPerson.innerText = Math.round(tipTotalPerPerson * 100) / 100;
@@ -57,12 +64,15 @@ fifteen.addEventListener("click", () => {
   tipToken.innerText = Math.round(tipValue * 100) / 100;
 
   //check customer input
-  if (customerNumber.value !== "") {
+  if (customerNumber.value !== "" && customerNumber.value >= 1) {
+    errorMessage.style.display = "none"; //remove div customer input is >= 0
     let tipTotalPerPerson =
       (parseFloat(document.getElementById("billAmount").value) + tipValue) /
       customerNumber.value;
     totalPerPerson.innerText = Math.round(tipTotalPerPerson * 100) / 100;
   } else {
+    errorMessage.innerText = "Can't be less than 0";
+    customerNumber.value = 1; //reset input to 1
     tipTotalPerPerson =
       parseFloat(document.getElementById("billAmount").value) + tipValue;
     totalPerPerson.innerText = Math.round(tipTotalPerPerson * 100) / 100;
@@ -75,12 +85,15 @@ twentyFive.addEventListener("click", () => {
   tipToken.innerText = Math.round(tipValue * 100) / 100;
 
   //check customer input
-  if (customerNumber.value !== "") {
+  if (customerNumber.value !== "" && customerNumber.value >= 1) {
+    errorMessage.style.display = "none"; //remove div customer input is >= 0
     let tipTotalPerPerson =
       (parseFloat(document.getElementById("billAmount").value) + tipValue) /
       customerNumber.value;
     totalPerPerson.innerText = Math.round(tipTotalPerPerson * 100) / 100;
   } else {
+    errorMessage.innerText = "Can't be less than 0";
+    customerNumber.value = 1; //reset input to 1
     tipTotalPerPerson =
       parseFloat(document.getElementById("billAmount").value) + tipValue;
     totalPerPerson.innerText = Math.round(tipTotalPerPerson * 100) / 100;
@@ -93,12 +106,15 @@ fifty.addEventListener("click", () => {
   tipToken.innerText = Math.round(tipValue * 100) / 100;
 
   //check customer input
-  if (customerNumber.value !== "") {
+  if (customerNumber.value !== "" && customerNumber.value >= 1) {
+    errorMessage.style.display = "none"; //remove div customer input is >= 0
     let tipTotalPerPerson =
       (parseFloat(document.getElementById("billAmount").value) + tipValue) /
       customerNumber.value;
     totalPerPerson.innerText = Math.round(tipTotalPerPerson * 100) / 100;
   } else {
+    errorMessage.innerText = "Can't be less than 0";
+    customerNumber.value = 1; //reset input to 1
     tipTotalPerPerson =
       parseFloat(document.getElementById("billAmount").value) + tipValue;
     totalPerPerson.innerText = Math.round(tipTotalPerPerson * 100) / 100;
@@ -117,12 +133,15 @@ customTip.addEventListener("keypress", (e) => {
     tipToken.innerText = Math.round(tipValue * 100) / 100;
 
     //check customer input
-    if (customerNumber.value !== "") {
+    if (customerNumber.value !== "" && customerNumber.value >= 1) {
+      errorMessage.style.display = "none"; //remove div customer input is >= 0
       let tipTotalPerPerson =
         (parseFloat(document.getElementById("billAmount").value) + tipValue) /
         customerNumber.value;
       totalPerPerson.innerText = Math.round(tipTotalPerPerson * 100) / 100;
     } else {
+      errorMessage.innerText = "Can't be less than 0";
+      customerNumber.value = 1; //reset input to 1
       tipTotalPerPerson =
         parseFloat(document.getElementById("billAmount").value) + tipValue;
       totalPerPerson.innerText = Math.round(tipTotalPerPerson * 100) / 100;
@@ -141,12 +160,15 @@ function getCustomerNumber(e) {
 
 //Check if customer number is not empty
 const checkCustomerInput = () => {
-  if (customerNumber.value !== "") {
+  if (customerNumber.value !== "" && customerNumber.value >= 1) {
+    errorMessage.style.display = "none"; //remove div customer input is >= 0
     let tipTotalPerPerson =
       (parseFloat(document.getElementById("billAmount").value) + tipValue) /
       customerNumber.value;
     totalPerPerson.innerText = Math.round(tipTotalPerPerson * 100) / 100;
   } else {
+    errorMessage.innerText = "Can't be less than 0";
+    customerNumber.value = 1; //reset input to 1
     tipTotalPerPerson =
       parseFloat(document.getElementById("billAmount").value) + tipValue;
     totalPerPerson.innerText = Math.round(tipTotalPerPerson * 100) / 100;
@@ -157,6 +179,7 @@ const checkCustomerInput = () => {
 const resetButton = document.getElementById("resetButton");
 resetButton.addEventListener("click", () => {
   document.getElementById("billAmount").value = "";
+  customTip.value = "";
   document.getElementById("emp_number").value = "";
   tipToken.innerText = "0.00";
   totalPerPerson.innerText = "0.00";
