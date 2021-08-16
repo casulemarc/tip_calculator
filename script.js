@@ -181,6 +181,7 @@ resetButton.addEventListener("click", () => {
   document.getElementById("billAmount").value = "";
   customTip.value = "";
   document.getElementById("emp_number").value = "";
+  errorMessage.style.display = "none";
   tipToken.innerText = "0.00";
   totalPerPerson.innerText = "0.00";
 });
