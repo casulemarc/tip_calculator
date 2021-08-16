@@ -20,8 +20,8 @@ Check out and test the full app <a href="https://tipsplitter.netlify.app/">Here 
 </div>
 
 ## Reach out to more of my projects on:
-## <a href="https://www.youtube.com/channel/UC3cQi5gvNeiPiPXTrMhZJMg"> Youtube </a>
-## <a href="https://twitter.com/mKasuleCoder">Twitter</a>
+## 🎶 <a href="https://www.youtube.com/channel/UC3cQi5gvNeiPiPXTrMhZJMg"> Youtube </a>
+## 😎<a href="https://twitter.com/mKasuleCoder">Twitter</a>
 
 
 
