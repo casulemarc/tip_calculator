@@ -6,7 +6,7 @@ This app calculates the amount of tip a customer(s) will give after having lunch
 ## Desktop Version.
 <img width="1114" alt="page 1" src="https://user-images.githubusercontent.com/31680529/129578570-f44ac877-b283-43d2-8d7a-882b4b08df80.png">
 
-<h3> App Logic</h3>
+## App Logic
 <img width="1115" alt="page 2" src="https://user-images.githubusercontent.com/31680529/129578584-78bf9a29-15fc-46f0-a30b-2843517a7cd9.png">
 
 <h3>User Input Error Logic</h3>
@@ -14,8 +14,8 @@ This app calculates the amount of tip a customer(s) will give after having lunch
 
 <h3>Mobile Version.</h3>
 <div>
-<img width="380" height="auto" alt="page 4" src="https://user-images.githubusercontent.com/31680529/129578620-b24a5b83-97c4-48fa-af4b-793291c2417d.png">
-<img width="380" height="auto"  alt="page five" src="https://user-images.githubusercontent.com/31680529/129579977-40a55220-bc81-47b6-b55c-963e37eed286.png">
+<img width="408" height="auto" alt="page 4" src="https://user-images.githubusercontent.com/31680529/129578620-b24a5b83-97c4-48fa-af4b-793291c2417d.png">
+<img width="408" height="auto"  alt="page five" src="https://user-images.githubusercontent.com/31680529/129579977-40a55220-bc81-47b6-b55c-963e37eed286.png">
 </div>
 
 
