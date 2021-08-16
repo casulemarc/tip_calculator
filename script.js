@@ -105,7 +105,30 @@ fifty.addEventListener("click", () => {
   }
 });
 //CUSTOM TIP BUTTON
-let customTip = document.getElementById("customTip"); // custom tips
+let customTip = document.getElementById("custom"); // custom tips values
+const customTipButton = document.getElementById("customTip"); //custom tip button
+customTip.addEventListener("keypress", (e) => {
+  let customTipPercent = parseFloat(e.target.value) / 100; //store custom tip event
+  //solve for the tip by pressing button
+  customTipButton.addEventListener("click", () => {
+    let tipValue =
+      (document.getElementById("custom").value / 100) *
+      parseFloat(document.getElementById("billAmount").value);
+    tipToken.innerText = Math.round(tipValue * 100) / 100;
+
+    //check customer input
+    if (customerNumber.value !== "") {
+      let tipTotalPerPerson =
+        (parseFloat(document.getElementById("billAmount").value) + tipValue) /
+        customerNumber.value;
+      totalPerPerson.innerText = Math.round(tipTotalPerPerson * 100) / 100;
+    } else {
+      tipTotalPerPerson =
+        parseFloat(document.getElementById("billAmount").value) + tipValue;
+      totalPerPerson.innerText = Math.round(tipTotalPerPerson * 100) / 100;
+    }
+  });
+});
 //function event to return bill amount function
 function getBillAmount(e) {
   totalBill = parseInt(e.target.value); //store the keypress data into total bill
