@@ -152,3 +152,12 @@ const checkCustomerInput = () => {
     totalPerPerson.innerText = Math.round(tipTotalPerPerson * 100) / 100;
   }
 };
+
+//RESET BUTTON
+const resetButton = document.getElementById("resetButton");
+resetButton.addEventListener("click", () => {
+  document.getElementById("billAmount").value = "";
+  document.getElementById("emp_number").value = "";
+  tipToken.innerText = "0.00";
+  totalPerPerson.innerText = "0.00";
+});

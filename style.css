@@ -117,10 +117,18 @@ h6 {
     font-weight: 900;
 }
 
+.grid-tip:hover {
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+
 .grid-tip:nth-child(3) {
     background-color: hsl(172, 67%, 45%);
     color: hsl(183, 100%, 15%);
-    ;
+}
+.grid-tip:nth-child(3):hover{
+    background-color: hsl(183, 100%, 15%);
+    color: hsl(172, 67%, 45%);
 }
 
 .grid-tip:nth-child(6) {
@@ -131,8 +139,8 @@ h6 {
 }
 
 .grid-tip:nth-child(6):hover {
-    background-color: hsl(159, 79%, 87%);
-    color: hsl(183, 64%, 27%);
+    background-color: hsl(159, 79%, 87%) !important;
+    color: hsl(183, 64%, 27%) !important;
 }
 
 #custom {
@@ -177,6 +185,10 @@ h6 {
     margin-top: 3rem;
     color: hsl(183, 100%, 15%);
     font-weight: 900;
+}
+
+.reset_button button:hover {
+    color: #fff;
 }
 
 #tipToken {
