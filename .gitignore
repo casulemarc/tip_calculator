@@ -16,5 +16,8 @@
 .prettierignore
 
 README.md
-readme-template.md
+README-template.md
 style-guide.md
+script-2.js
+.vscode/
+

@@ -125,7 +125,19 @@ h6 {
 .grid-tip:nth-child(6) {
     background-color: hsl(200, 10%, 88%);
     color: hsl(183, 100%, 15%);
+    align-items: center;
+    justify-content: center;
+}
+
+#custom {
+    width: 100%;
+    height: auto;
+    background-color: inherit !important;
+    border: none !important;
+    outline: none;
+    text-align: center;
     font-weight: 900;
+    color: hsl(183, 100%, 15%);
 }
 
 .tip_amount {

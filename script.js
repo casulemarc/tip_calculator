@@ -1,56 +1,131 @@
 //Grab all data from input box
-//let dataBox = []
 let totalBill = document.getElementById("billAmount");
-//event will be fired when bill activity is entred
+//event will be fired when bill activity is entered
 totalBill.addEventListener("keypress", getBillAmount);
-let tipToken = document.getElementById("tipToken"); //sample code to store data
-
-//Return bill amount function
-function getBillAmount(e) {
-  totalBill = parseInt(e.target.value); //store the keypress data into total bill
-  //tipToken.textContent = numbOfCustomers; // sample code to test output into tip box
-}
 
 //Grab customer numbers
 let numbOfCustomers = document.getElementById("emp_number");
 //event will be fired when num of employees is entered
 numbOfCustomers.addEventListener("keypress", getCustomerNumber);
-//function to handle event
-function getCustomerNumber(e) {
-  numbOfCustomers = parseInt(e.target.value); //store customer number to numbOfCustomers
-  tipToken.textContent = numbOfCustomers; // sample code to test output into tip box
+
+let tipToken = document.getElementById("tipToken"); // tips
+let totalPerPerson = document.getElementById("tipTotal"); // total fees
+let customerNumber = document.getElementById("emp_number"); //access the number of customers
+
+//BUTTONS
+//FIVE BUTTON
+const five = document.getElementById("five");
+five.addEventListener("click", () => {
+  //tips per person
+  let tipValue = 0.05 * parseFloat(document.getElementById("billAmount").value);
+  tipToken.innerText = Math.round(tipValue * 100) / 100;
+
+  //check customer input
+  if (customerNumber.value !== "") {
+    let tipTotalPerPerson =
+      (parseFloat(document.getElementById("billAmount").value) + tipValue) /
+      customerNumber.value;
+    totalPerPerson.innerText = Math.round(tipTotalPerPerson * 100) / 100;
+  } else {
+    tipTotalPerPerson =
+      parseFloat(document.getElementById("billAmount").value) + tipValue;
+    totalPerPerson.innerText = Math.round(tipTotalPerPerson * 100) / 100;
+  }
+});
+//TEN BUTTON
+const ten = document.getElementById("ten");
+ten.addEventListener("click", () => {
+  let tipValue = 0.1 * parseFloat(document.getElementById("billAmount").value);
+  tipToken.innerText = Math.round(tipValue * 100) / 100;
+
+  //check customer input
+  if (customerNumber.value !== "") {
+    let tipTotalPerPerson =
+      (parseFloat(document.getElementById("billAmount").value) + tipValue) /
+      customerNumber.value;
+    totalPerPerson.innerText = Math.round(tipTotalPerPerson * 100) / 100;
+  } else {
+    tipTotalPerPerson =
+      parseFloat(document.getElementById("billAmount").value) + tipValue;
+    totalPerPerson.innerText = Math.round(tipTotalPerPerson * 100) / 100;
+  }
+});
+//FIFTEEN BUTTON
+const fifteen = document.getElementById("fifteen");
+fifteen.addEventListener("click", () => {
+  let tipValue = 0.15 * parseFloat(document.getElementById("billAmount").value);
+  tipToken.innerText = Math.round(tipValue * 100) / 100;
+
+  //check customer input
+  if (customerNumber.value !== "") {
+    let tipTotalPerPerson =
+      (parseFloat(document.getElementById("billAmount").value) + tipValue) /
+      customerNumber.value;
+    totalPerPerson.innerText = Math.round(tipTotalPerPerson * 100) / 100;
+  } else {
+    tipTotalPerPerson =
+      parseFloat(document.getElementById("billAmount").value) + tipValue;
+    totalPerPerson.innerText = Math.round(tipTotalPerPerson * 100) / 100;
+  }
+});
+//TWENTY FIVE BUTTON
+const twentyFive = document.getElementById("twentyFive");
+twentyFive.addEventListener("click", () => {
+  let tipValue = 0.25 * parseFloat(document.getElementById("billAmount").value);
+  tipToken.innerText = Math.round(tipValue * 100) / 100;
+
+  //check customer input
+  if (customerNumber.value !== "") {
+    let tipTotalPerPerson =
+      (parseFloat(document.getElementById("billAmount").value) + tipValue) /
+      customerNumber.value;
+    totalPerPerson.innerText = Math.round(tipTotalPerPerson * 100) / 100;
+  } else {
+    tipTotalPerPerson =
+      parseFloat(document.getElementById("billAmount").value) + tipValue;
+    totalPerPerson.innerText = Math.round(tipTotalPerPerson * 100) / 100;
+  }
+});
+//FIFTY BUTTON
+const fifty = document.getElementById("fifty");
+fifty.addEventListener("click", () => {
+  let tipValue = 0.5 * parseFloat(document.getElementById("billAmount").value);
+  tipToken.innerText = Math.round(tipValue * 100) / 100;
+
+  //check customer input
+  if (customerNumber.value !== "") {
+    let tipTotalPerPerson =
+      (parseFloat(document.getElementById("billAmount").value) + tipValue) /
+      customerNumber.value;
+    totalPerPerson.innerText = Math.round(tipTotalPerPerson * 100) / 100;
+  } else {
+    tipTotalPerPerson =
+      parseFloat(document.getElementById("billAmount").value) + tipValue;
+    totalPerPerson.innerText = Math.round(tipTotalPerPerson * 100) / 100;
+  }
+});
+//CUSTOM TIP BUTTON
+let customTip = document.getElementById("customTip"); // custom tips
+//function event to return bill amount function
+function getBillAmount(e) {
+  totalBill = parseInt(e.target.value); //store the keypress data into total bill
 }
 
-// //Return number of customers present
-// let numbCustomerResult = result;
+//function event to handle number of customers
+function getCustomerNumber(e) {
+  numbOfCustomers = parseFloat(e.target.value); //store customer number to numbOfCustomers
+}
 
-// //tip Amount per customer
-// const tipReward = (totalBillResult, numbOfCustomers) => {
-//   return totalBillResult / numbCustomerResult;
-// };
-
-// //number of customers present error tracker
-// let error_numOfPeople = document.getElementById(
-//   "error_numOfPeopleID"
-// ).innerText;
-// //Check if number is entered
-// const checkNumOfCustomers = () => {
-//   if (numbOfCustomers === null && numbOfCustomers === 0) {
-//     error_numOfPeopleID = 'Please enter "0" or more'; //remember to call this function
-//   }
-// };
-
-// //calculate tips
-// //select tips
-// const five = document.getElementById("five");
-// function pressedFiveTip() {
-//   return "Pressed";
-// }
-
-// console.log(chooseTips);
-
-const ten = document.getElementById("ten");
-const fifteen = document.getElementById("fifteen");
-const twentyFive = document.getElementById("twentyFive");
-const fifty = document.getElementById("fifty");
-const customTip = document.getElementById("customTip");
+//Check if customer number is not empty
+const checkCustomerInput = () => {
+  if (customerNumber.value !== "") {
+    let tipTotalPerPerson =
+      (parseFloat(document.getElementById("billAmount").value) + tipValue) /
+      customerNumber.value;
+    totalPerPerson.innerText = Math.round(tipTotalPerPerson * 100) / 100;
+  } else {
+    tipTotalPerPerson =
+      parseFloat(document.getElementById("billAmount").value) + tipValue;
+    totalPerPerson.innerText = Math.round(tipTotalPerPerson * 100) / 100;
+  }
+};
