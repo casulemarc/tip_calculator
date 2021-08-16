@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 
 * {
@@ -75,6 +76,7 @@
     color: hsl(183, 100%, 15%);
     font-size: 900;
     border: hidden !important;
+    word-wrap: break-word;
 }
 
 .bill_amount input:focus {
@@ -116,15 +118,41 @@ h6 {
     font-weight: 900;
 }
 
+.grid-tip:hover {
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+
 .grid-tip:nth-child(3) {
     background-color: hsl(172, 67%, 45%);
-    color: #000;
+    color: hsl(183, 100%, 15%);
+}
+.grid-tip:nth-child(3):hover{
+    background-color: hsl(183, 100%, 15%);
+    color: hsl(172, 67%, 45%);
 }
 
 .grid-tip:nth-child(6) {
     background-color: hsl(200, 10%, 88%);
     color: hsl(183, 100%, 15%);
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-tip:nth-child(6):hover {
+    background-color: hsl(159, 79%, 87%) !important;
+    color: hsl(183, 64%, 27%) !important;
+}
+
+#custom {
+    width: 100%;
+    height: auto;
+    background-color: inherit !important;
+    border: none !important;
+    outline: none;
+    text-align: center;
     font-weight: 900;
+    color: hsl(183, 100%, 15%);
 }
 
 .tip_amount {
@@ -145,6 +173,7 @@ h6 {
 .tip_amount {
     margin-top: 1rem;
     margin-bottom: 2rem;
+    word-wrap: break-word;
 }
 
 .tip_amount span {
@@ -159,14 +188,25 @@ h6 {
     font-weight: 900;
 }
 
+.reset_button button:hover {
+    color: #fff;
+}
+
 #tipToken {
     font-size: 30px;
     font-weight: 900;
+    word-wrap: break-word;
 }
 
 #tipTotal {
     font-size: 30px;
     font-weight: 900;
+}
+
+.error_numOfPeopleBox {
+    color: rgb(255, 72, 0);
+    font-size: 11px;
+    text-align: left;
 }
 
 #tipAmountID {
@@ -193,4 +233,7 @@ h6 {
         flex-direction: column;
         width: 100%;
     }
-}
+
+    .window_one {
+        margin-bottom: 1rem;
+    }
